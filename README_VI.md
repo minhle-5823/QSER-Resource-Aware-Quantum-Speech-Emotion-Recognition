@@ -5,13 +5,13 @@
 ## Repo đang có gì?
 
 - `README.md`: giới thiệu nghiên cứu, tác giả, kết quả chính và trích dẫn.
-- `figures/`: 4 hình gốc được lấy từ bộ tài liệu cậu cung cấp và tối ưu kích thước cho GitHub.
+- `figures/`: biểu đồ tóm tắt được vẽ lại từ số liệu, không chứa 4 hình gốc của bản thảo.
 - `results/paper_tables/`: các bảng số liệu được **chép lại từ bản thảo** (không phải kết quả tính lại từ file raw).
-- `results/supplied/`: một số file CSV/JSON **trích nguyên** từ ZIP; nhiều file chỉ bao phủ **một phần số seed/thí nghiệm**.
+- **Đã loại:** các CSV/JSON log thực nghiệm nội bộ, file cấu hình, đường dẫn môi trường, ảnh gốc trong manuscript và tài liệu minh chứng acceptance.
 - `scripts/`: chạy kiểm tra CSV, xem bảng kết quả và vẽ biểu đồ từ dữ liệu có sẵn.
 - `docs/`: phương pháp, dữ liệu, giới hạn tái lập và checklist trước khi công khai.
 
-**Chưa có:** code gốc chạy thí nghiệm QSVC/VQC/QCNN, notebook Kaggle, hoặc toàn bộ log 10-seed của bản thảo. ZIP cậu gửi không chứa những file đó, nên repo chưa thể thực hiện lại quá trình training từ đầu.
+**Chưa có:** code gốc chạy thí nghiệm QSVC/VQC/QCNN, notebook Kaggle, hoặc toàn bộ log 10-seed của bản thảo. ZIP gốc cậu gửi không chứa những file đó, nên repo chưa thể thực hiện lại quá trình training từ đầu.
 
 ## Chạy công cụ phân tích
 

@@ -27,10 +27,11 @@ class TestResearchTables(unittest.TestCase):
         rows = read('table6a_cross_corpus.csv')
         self.assertEqual(sum(r['ravdess_selector'] == r['cmu_mosei_selector'] for r in rows), 1)
 
-    def test_figure_files(self):
-        for n in ('figure1_workflow.png', 'figure2_selector_architecture.png',
-                  'figure3_qubo_and_stability.png', 'figure4_simulator_scaling.png'):
-            self.assertTrue((ROOT / 'figures' / n).is_file())
+    def test_public_excludes_internal_material(self):
+        self.assertFalse((ROOT / 'results/supplied').exists())
+        self.assertFalse((ROOT / 'docs/SOURCE_INVENTORY.csv').exists())
+        self.assertFalse(list(ROOT.rglob('figure1_workflow.png')))
+        self.assertFalse(list(ROOT.rglob('*.pdf')))
 
 
 if __name__ == '__main__':

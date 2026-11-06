@@ -2,7 +2,6 @@
 """Check only the bundled research tables; does NOT rerun QML experiments."""
 from pathlib import Path
 import csv
-import hashlib
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,15 +38,7 @@ def validate():
                     raise ValueError(f'Out-of-range {c} in {rel}: {r[c]}')
         n += len(rows)
 
-    inventory, items = read_csv(ROOT / 'docs/SOURCE_INVENTORY.csv')
-    for row in items:
-        p = ROOT / row['repository_path']
-        if not p.is_file():
-            raise ValueError(f'Missing source data: {p}')
-        content = p.read_bytes()
-        if hashlib.sha256(content).hexdigest() != row['sha256']:
-            raise ValueError(f'Checksum mismatch: {p}')
-    print(f'OK: {len(REQUIRED)} paper tables ({n} rows), {len(items)} original CSV/JSON artifacts verified.')
+    print(f'OK: {len(REQUIRED)} transcribed paper tables ({n} rows) validated.')
     print('Note: checks verify packaged-file integrity, not scientific reproduction.')
     return 0
 

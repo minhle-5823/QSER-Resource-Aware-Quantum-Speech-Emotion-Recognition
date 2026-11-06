@@ -13,13 +13,13 @@
 **Status:** **Accepted; presentation and proceedings publication pending** (as of November 2026).  
 **Conference:** [PDCAT 2026](https://www.pd-cat.org/2026/) · Changsha, China · 4–6 December 2026.
 
-> **Scope of this artifact:** This repository documents the accepted manuscript's methodology, paper-reported result tables, selected original result CSVs, and post-hoc analysis utilities. The supplied project archive **did not contain the original experiment source code or notebooks**. This is therefore **not yet an end-to-end training reproduction package**. See [Reproducibility](docs/REPRODUCIBILITY.md).
+> **Scope of this artifact:** This public repository introduces the accepted study, includes selected paper-reported summary tables, and offers simple scripts for viewing and plotting those tables. Internal experiment outputs, manuscript figures, and full-text draft are not distributed. The supplied project archive **did not contain the original experiment source code or notebooks**. This is therefore **not yet an end-to-end training reproduction package**. See [Reproducibility](docs/REPRODUCIBILITY.md).
 
 ## Overview
 
 Quantum classifiers are resource-constrained: choosing `k` acoustic features often determines the number of qubits, circuit width, and simulator cost. This study fixes a 206-dimensional handcrafted acoustic representation and tests how feature selection, classifier architecture, and feature budgets interact under leakage-controlled evaluation. Quantum models are **simulated classically**, not run on quantum hardware.
 
-![Leakage-controlled research workflow](figures/figure1_workflow.png)
+The research compares compact feature subsets and downstream quantum/classical classifiers under controlled evaluation. Full manuscript figures are withheld until the authors confirm public-release permissions.
 
 **Benchmarked approaches:**
 - **Quantum:** quantum support vector classifier (QSVC), variational quantum classifier (VQC), and a QCNN-like classifier.
@@ -39,7 +39,9 @@ The table below is reproduced from **Table 3 of the accepted manuscript** (10 ac
 | QCNN-like | **0.760 ± 0.099** (MI) | 0.745 ± 0.102 (MI) |
 | Classical control | **0.848 ± 0.100** (QUBO-SA + RF) | **0.848 ± 0.095** (MI + RF) |
 
-![Feature selector and architecture interaction](figures/figure2_selector_architecture.png)
+![Summary of reported Macro-F1 by feature budget](figures/summary_macro_f1.png)
+
+*Summary plot recreated from selected reported table values, not a training rerun.*
 
 **Interpretation:** Classical matched baselines remain stronger in the reported comparisons. The best selector depends on architecture and feature budget; this study **does not demonstrate quantum predictive advantage**. At k = 8, nested QUBO tuning shows suggestive improvements, but Holm-adjusted `p = 0.0625` does not meet a 0.05 significance threshold. On eight-class RAVDESS, the best quantum Macro-F1 values are `0.278` (k = 4) and `0.279` (k = 8), below matched classical bests `0.354` and `0.353`.
 
@@ -50,10 +52,9 @@ The `k = 16` results are **three-seed stress-tier** observations and should not 
 ```text
 .
 ├── README.md, README_VI.md, CITATION.cff, CITATION.bib
-├── figures/                      # Figures corresponding to the accepted manuscript
+├── figures/                      # Independently plotted results summary (no manuscript figures)
 ├── results/
-│   ├── paper_tables/             # Reported manuscript Tables 3–6 (manual transcription)
-│   └── supplied/                 # Selected original CSV/JSON outputs from the supplied ZIP
+│   └── paper_tables/             # Reported manuscript Tables 3–6 (manual transcription)
 ├── scripts/                      # Data checks, table display and visualization (not training)
 ├── tests/                        # Basic artifact integrity tests
 ├── docs/
@@ -81,6 +82,10 @@ python scripts/plot_paper_results.py
 
 The plot script writes a **derived visualization** to `figures/generated/`. It does not rerun quantum simulations. To understand experimental setup and missing materials, see [Methodology](docs/METHODOLOGY.md) and [Reproducibility](docs/REPRODUCIBILITY.md).
 
+## Release boundary
+
+This public package deliberately excludes the author's unpublished manuscript/PDF, original manuscript diagrams, acceptance emails and proofs, datasets, derived feature caches, internal experiment CSV/JSON logs, local configurations and training notebooks. It contains **summary results transcribed from the accepted paper**. These are *not independent reproduced results*. Public release of even these summaries should be coordinated with the coauthors.
+
 ## Data availability and responsible reuse
 
 - [RAVDESS (official Zenodo record)](https://zenodo.org/records/1188976), licensed by its creators under **CC BY-NC-SA 4.0**.
@@ -94,4 +99,4 @@ The paper has been **accepted but is not yet published**, so **no DOI, publisher
 
 ## License and publication notice
 
-The authors have not selected a public software license for this research artifact. **No rights beyond those granted by applicable law are implied.** The accepted manuscript PDF and acceptance correspondence are intentionally excluded pending publisher/author permission. Consult all coauthors before making a repository public. See [Release checklist](docs/RELEASE_CHECKLIST.md).
+The authors have not selected a public software license for this research artifact. **No rights beyond those granted by applicable law are implied.** The manuscript PDF, correspondence, internal logs/configuration, and original figures are intentionally excluded pending publisher/author permission. Consult all coauthors before making a repository public. See [Release checklist](docs/RELEASE_CHECKLIST.md).
