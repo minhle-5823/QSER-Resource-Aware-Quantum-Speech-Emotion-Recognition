@@ -1,7 +1,0 @@
-model,k,ravdess_selector,ravdess_macro_f1,cmu_mosei_selector,cmu_mosei_macro_f1,seeds
-QSVC,4,MI,0.27,QUBO-SA,0.166,5
-QSVC,8,MI,0.194,PCA,0.175,5
-VQC,4,QUBO-SA,0.175,Random,0.204,5
-VQC,8,PCA,0.182,MI,0.172,5
-QCNN-like,4,mRMR,0.282,Random,0.159,5
-QCNN-like,8,MI,0.364,MI,0.198,5

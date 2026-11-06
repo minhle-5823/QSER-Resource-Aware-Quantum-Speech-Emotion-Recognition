@@ -1,9 +1,0 @@
-model_family,feature_budget_k,best_configuration,accuracy_mean,accuracy_sd,macro_f1_mean,macro_f1_sd,macro_f1_ci95_low,macro_f1_ci95_high,seeds
-QSVC,4,QUBO-SA,0.73,0.113,0.728,0.114,0.647,0.81,10
-QSVC,8,MI,0.687,0.106,0.676,0.116,0.593,0.759,10
-VQC,4,QUBO-SA,0.73,0.069,0.709,0.089,0.646,0.773,10
-VQC,8,MI,0.717,0.072,0.694,0.088,0.631,0.757,10
-QCNN-like,4,MI,0.767,0.097,0.76,0.099,0.689,0.831,10
-QCNN-like,8,MI,0.75,0.097,0.745,0.102,0.672,0.818,10
-Classical,4,QUBO-SA + RF,0.85,0.1,0.848,0.1,0.777,0.92,10
-Classical,8,MI + RF,0.85,0.095,0.848,0.095,0.78,0.916,10

@@ -1,7 +1,0 @@
-model,feature_budget_k,noise_delta_accuracy,noise_delta_macro_f1,seeds
-QSVC,4,0.007,0.006,5
-QSVC,8,-0.02,-0.039,5
-VQC,4,-0.107,-0.089,5
-VQC,8,-0.067,-0.03,5
-QCNN-like,4,-0.013,-0.015,5
-QCNN-like,8,-0.007,-0.007,5
