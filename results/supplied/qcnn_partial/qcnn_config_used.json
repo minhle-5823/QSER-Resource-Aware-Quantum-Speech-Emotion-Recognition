@@ -1,0 +1,52 @@
+{
+  "DATA_ROOT": "/kaggle/input/datasets/uwrfkaggler/ravdess-emotional-speech-audio",
+  "MAIN_CACHE_DIR": "/kaggle/working/qser_quantum_downstream_v3/cache",
+  "WORK_DIR": "/kaggle/working/qser_qcnn_ablation_v3",
+  "TABLE_DIR": "/kaggle/working/qser_qcnn_ablation_v3/tables",
+  "CACHE_DIR": "/kaggle/working/qser_qcnn_ablation_v3/cache",
+  "SAMPLE_RATE": 16000,
+  "MAX_DURATION_SEC": 4.0,
+  "N_MFCC": 13,
+  "N_MELS": 40,
+  "USE_MAIN_CACHE": false,
+  "USE_CACHE": true,
+  "MAX_AUDIO_FILES": null,
+  "DEDUPLICATE_BASENAME": true,
+  "SEEDS": [
+    42,
+    2026,
+    7
+  ],
+  "TEST_SIZE": 0.2,
+  "SPLIT_MODES": [
+    "speaker_independent"
+  ],
+  "KEEP_EMOTIONS_QCNN": [
+    "calm",
+    "happy"
+  ],
+  "FEATURE_BUDGETS_QCNN": [
+    4,
+    8,
+    16
+  ],
+  "FEATURE_METHODS_QCNN": [
+    "Random",
+    "MI",
+    "PCA_Loading",
+    "mRMR_Greedy",
+    "QUBO_SA"
+  ],
+  "MAX_TRAIN_PER_CLASS": 35,
+  "MAX_TEST_PER_CLASS": 20,
+  "EPOCHS": 30,
+  "BATCH_SIZE": 16,
+  "LR": 0.03,
+  "WEIGHT_DECAY": 0.0001,
+  "DEVICE": "cpu",
+  "QUBO_CANDIDATE_TOP_N": 64,
+  "QUBO_SA_ITER": 1500,
+  "QUBO_ALPHA": 1.0,
+  "QUBO_BETA": 0.5,
+  "QUBO_GAMMA": 2.0
+}

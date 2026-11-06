@@ -1,0 +1,113 @@
+{
+  "DATA_ROOT": "/kaggle/input/datasets/uwrfkaggler/ravdess-emotional-speech-audio",
+  "WORK_DIR": "/kaggle/working/qser_quantum_downstream_v3",
+  "CACHE_DIR": "/kaggle/working/qser_quantum_downstream_v3/cache",
+  "FIG_DIR": "/kaggle/working/qser_quantum_downstream_v3/figures",
+  "TABLE_DIR": "/kaggle/working/qser_quantum_downstream_v3/tables",
+  "SAMPLE_RATE": 16000,
+  "MAX_DURATION_SEC": 4.0,
+  "N_MFCC": 13,
+  "N_MELS": 40,
+  "USE_CACHE": true,
+  "MAX_AUDIO_FILES": null,
+  "DEDUPLICATE_BASENAME": true,
+  "CACHE_VERSION": "v3_paper_aligned_qsvc_vqc",
+  "TEST_SIZE": 0.2,
+  "SEEDS": [
+    42,
+    2026,
+    7
+  ],
+  "FEATURE_BUDGETS": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "QUICK_FEATURE_BUDGETS_QML": [
+    4,
+    8,
+    16
+  ],
+  "SPLIT_MODES": [
+    "speaker_independent",
+    "stratified"
+  ],
+  "KEEP_EMOTIONS_CLASSICAL": null,
+  "KEEP_EMOTIONS_QUANTUM": null,
+  "QML_FEATURE_METHODS": [
+    "Random",
+    "MI",
+    "PCA_Loading",
+    "mRMR_Greedy",
+    "QUBO_SA"
+  ],
+  "QSVC_MAX_QUBITS": 16,
+  "VQC_MAX_QUBITS": 16,
+  "RUN_PCA_COMPONENTS": true,
+  "RUN_RANDOM": true,
+  "RUN_MI": true,
+  "RUN_PCA_LOADING": true,
+  "RUN_MRMR": true,
+  "RUN_L1": true,
+  "RUN_RFE_LINEAR_SVM": false,
+  "RUN_QUBO_SA": true,
+  "RUN_QUBO_ABLATION": true,
+  "RUN_CLASSICAL": true,
+  "RUN_QSVC": false,
+  "RUN_VQC": false,
+  "RUN_NOISE_STUDY": false,
+  "QSVC_FEATURE_MAP_REPS": [
+    1,
+    2
+  ],
+  "QSVC_ENTANGLEMENTS": [
+    "linear"
+  ],
+  "QSVC_MAX_TRAIN_PER_CLASS": 35,
+  "QSVC_MAX_TEST_PER_CLASS": 20,
+  "VQC_MAX_TRAIN_PER_CLASS": 35,
+  "VQC_MAX_TEST_PER_CLASS": 20,
+  "VQC_MAXITER": 50,
+  "VQC_REPS": 1,
+  "SHOTS": 1024,
+  "QUBO_CANDIDATE_TOP_N": 64,
+  "QUBO_SA_ITER": 3000,
+  "QUBO_ALPHA": 1.0,
+  "QUBO_BETA": 0.5,
+  "QUBO_GAMMA": 2.0,
+  "QUBO_ABLATION_GRID": [
+    [
+      1.0,
+      0.0,
+      2.0
+    ],
+    [
+      1.0,
+      0.2,
+      2.0
+    ],
+    [
+      1.0,
+      0.5,
+      2.0
+    ],
+    [
+      1.0,
+      1.0,
+      2.0
+    ],
+    [
+      1.0,
+      0.5,
+      1.0
+    ],
+    [
+      1.0,
+      0.5,
+      5.0
+    ]
+  ],
+  "SAVE_TABLES": true,
+  "SAVE_FIGURES": true
+}

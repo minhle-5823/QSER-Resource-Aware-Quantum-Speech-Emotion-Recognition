@@ -1,0 +1,2 @@
+split_mode,seed,feature_method,k,classifier,accuracy,macro_f1,weighted_f1,fit_time_sec,predict_time_sec,n_train_eval,n_test_eval,classes,source_batch,batch_name,train_per_class,test_per_class,qsvc_reps,vqc_maxiter,k16_safe_sample_cap
+speaker_independent,2026,Random_k16,16,QSVC_ZZ_reps1_linear,0.5666666666666667,0.5417156286721504,0.5417156286721504,6077.459973096848,7520.540643930435,50,30,calm|happy,qsvc_Random_k16_s2026,qsvc_Random_k16_s2026,25,15,[1],,False
