@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Local / licensed data and feature caches
+/data/raw/
+/data/interim/
+/data/processed/
+**/cache/
+*.npy
+*.npz
+*.pkl
+*.joblib
+*.h5
+*.ckpt
+*.pt
+*.pth
+
+# Private correspondence / author proofs / unpublished typesetting
+/Proof/
+/private/
+/acceptance*/
+*.eml
+*.msg
+*.pdf
+*.docx
+*.pptx
+
+# Large experiment archives, generated artifacts
+*.zip
+figures/generated/
+results/generated/
+.DS_Store
+Thumbs.db

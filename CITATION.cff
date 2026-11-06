@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use these artifacts, cite the accepted manuscript. Update with the official Springer record after publication."
+title: "Resource-Aware Quantum Downstream Classification for Speech Emotion Recognition under Compact Feature Budgets"
+type: software
+authors:
+  - family-names: Le
+    given-names: Minh Ngoc
+  - family-names: Huynh
+    given-names: Duy Thanh
+  - family-names: Tien
+    given-names: Bao Quoc
+  - family-names: Tran
+    given-names: Hoang Ngoc
+abstract: "Research result tables and post-hoc data-analysis utilities accompanying an accepted PDCAT 2026 paper; presentation and publication pending."
+keywords:
+  - speech emotion recognition
+  - quantum machine learning
+  - feature selection
+  - QSVC
+  - VQC
+  - QCNN
+  - QUBO
+  - PDCAT 2026
